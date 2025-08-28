@@ -55,7 +55,10 @@ public class InventoryManager {
     public static void findInstruments(ArrayList<Instrument> inventory, String typeQuery, PrintWriter writer) {
         boolean found = false;
         writer.write("\n\nINVENTORY OF TYPE: " + typeQuery + "\n");
+
+        //complete logic to only write the items of typeQuery
         writer.write(String.format("%-20s%-20s%-20s%10s%10s%15s\n","TYPE","NAME","MANUFACTURER","YEAR","COST $","STRING INFO"));
+        
         
         
         
@@ -66,6 +69,8 @@ public class InventoryManager {
     public static void listManufacturers(List<Instrument> inventory, String maker, PrintWriter writer) {
         boolean found = false;
         writer.write("\n\nINVENTORY FROM MAKER: " + maker + "\n");
+
+        //complete logic to only write the items of maker
         writer.write(String.format("%-20s%-20s%-20s%10s%10s%15s\n","TYPE","NAME","MANUFACTURER","YEAR","COST $","STRING INFO"));
 
     }

@@ -12,20 +12,15 @@ class StringInstrument extends Instrument {
 
     //complete getters
     public int getNumStrings() { return numStrings; }
-    public int getNumFrets() { return numFrets; }
-    public boolean isBowed() { return isBowed; }
+
 
     //complete setters
     public void setNumStrings(int strings) { this.numStrings = strings; }
-    public void setNumFrets(int frets) { this.numFrets = frets; }
-    public void setBowed(boolean bowed) { this.isBowed = bowed; }
 
+
+    //create the @Override function for printInstrument
     @Override
     public void printInstrument(PrintWriter writer) {
-        super.printInstrument(writer);
-        String bow = "Bowed";
-        if (!isBowed)
-            bow = "Not Bowed";
-        writer.write(String.format("%5d%5d%10s", numStrings, numFrets, bow));
+
     }
 }
