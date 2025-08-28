@@ -7,8 +7,10 @@ class Instrument {
     protected int yearBuilt;
     protected int cost;
 
+    // Default constructor
     public Instrument() {}
 
+    // Overloaded constructor
     public Instrument(String type, String name, String manufacturer, int year, int cost) {
         this.instrumentType = type;
         this.instrumentName = name;

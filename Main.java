@@ -6,49 +6,26 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) {
-        List<Instrument> inventory = new ArrayList<>();
+        
+        //create an arraylist of instrument objects
+        ArrayList<Instrument> inventory = new ArrayList<>();
+
+        //set input for menu choices
         Scanner scanner = new Scanner(System.in);
         String inputFile = "instrument.csv";
         String errorFile = "error.txt";
         String reportFile = "report.txt";
 
+        //readFile will open & close error file
         InventoryManager.readFile(inputFile, errorFile, inventory);
         System.out.println("Inventory loaded: " + inventory.size() + " items.\n");
 
+        //try to open the output file for the report 
         try (PrintWriter writer = new PrintWriter(new FileWriter(reportFile))) {
             int choice;
-            do {
-                System.out.println("\n===== Instrument Inventory Menu =====");
-                System.out.println("1. List all instruments");
-                System.out.println("2. Find instruments by type");
-                System.out.println("3. List instruments by manufacturer");
-                System.out.println("4. Exit");
-                System.out.print("Choose an option: ");
-
-                choice = scanner.nextInt();
-                scanner.nextLine(); // consume newline
-
-                switch (choice) {
-                    case 1:
-                        InventoryManager.listInstruments(inventory, writer);
-                        break;
-                    case 2:
-                        System.out.print("Enter instrument type to search: ");
-                        String type = scanner.nextLine();
-                        InventoryManager.findInstruments(inventory, type, writer);
-                        break;
-                    case 3:
-                        System.out.print("Enter manufacturer to search: ");
-                        String maker = scanner.nextLine();
-                        InventoryManager.listManufacturers(inventory, maker, writer);
-                        break;
-                    case 4:
-                        System.out.println("Exiting...");
-                        break;
-                    default:
-                        System.out.println("Invalid choice. Try again.");
-                }
-            } while (choice != 4);
+            //print the menu & stay in loop until '4' is chosen
+            //add logic (switch?) to choose which function to do based on input
+  
 
             scanner.close();
         

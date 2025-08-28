@@ -4,18 +4,18 @@ class StringInstrument extends Instrument {
     private int numFrets;
     private boolean isBowed;
 
+    //complete overloaded constructor 
     public StringInstrument(String type, String name, String manufacturer,
                             int year, int cost, int strings, int frets, boolean bowed) {
-        super(type, name, manufacturer, year, cost);
-        this.numStrings = strings;
-        this.numFrets = frets;
-        this.isBowed = bowed;
+
     }
 
+    //complete getters
     public int getNumStrings() { return numStrings; }
     public int getNumFrets() { return numFrets; }
     public boolean isBowed() { return isBowed; }
 
+    //complete setters
     public void setNumStrings(int strings) { this.numStrings = strings; }
     public void setNumFrets(int frets) { this.numFrets = frets; }
     public void setBowed(boolean bowed) { this.isBowed = bowed; }
