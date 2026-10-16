@@ -1,4 +1,3 @@
-import java.io.PrintWriter;
 class StringInstrument extends Instrument {
     private int numStrings;
     private int numFrets;
@@ -18,9 +17,10 @@ class StringInstrument extends Instrument {
     public void setNumStrings(int strings) { this.numStrings = strings; }
 
 
-    //create the @Override function for printInstrument
+    //correct toString to print String Instrument information (adding the numString, numFrets, isBowed)
     @Override
-    public void printInstrument(PrintWriter writer) {
-
+    public String toString() {
+        String out = " ";
+        return out;
     }
 }

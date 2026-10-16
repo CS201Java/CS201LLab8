@@ -44,8 +44,7 @@ public class InventoryManager {
         writer.write("\n\nFULL INVENTORY LIST\n");
         writer.write(String.format("%-20s%-20s%-20s%10s%10s%15s\n","TYPE","NAME","MANUFACTURER","YEAR","COST $","STRING INFO"));
         for (Instrument i : inventory) {
-            i.printInstrument(writer);
-            writer.write("\n");
+            writer.print(i); 
         }
 
     }

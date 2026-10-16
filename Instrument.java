@@ -1,11 +1,9 @@
-import java.io.PrintWriter;
-
-class Instrument {
-    protected String instrumentType;
-    protected String instrumentName;
-    protected String instrumentManufacturer;
-    protected int yearBuilt;
-    protected int cost;
+public class Instrument {
+    private String instrumentType;
+    private String instrumentName;
+    private String instrumentManufacturer;
+    private int yearBuilt;
+    private int cost;
 
     // Default constructor
     public Instrument() {}
@@ -33,8 +31,10 @@ class Instrument {
     public void setYear(int year) { this.yearBuilt = year; }
     public void setCost(int cost) { this.cost = cost; }
 
-    public void printInstrument(PrintWriter writer) {
-        writer.write(String.format("%-20s%-20s%-20s%10d%10d",
-                instrumentType, instrumentName, instrumentManufacturer, yearBuilt, cost));
+    @Override
+    public String toString() {
+        String out = String.format("%-20s%-20s%-20s%10d%10d\n",
+                instrumentType, instrumentName, instrumentManufacturer, yearBuilt, cost);
+        return out;
     }
 }

@@ -1,6 +1,6 @@
 import java.io.FileWriter;
-import java.io.PrintWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.*;
 
 
@@ -12,8 +12,8 @@ class Main {
 
         //set input for menu choices
         Scanner scanner = new Scanner(System.in);
-        String inputFile = "instrument.csv";
-        String errorFile = "error.txt";
+        String inputFile  = "instrument.csv";
+        String errorFile  = "error.txt";
         String reportFile = "report.txt";
 
         //readFile will open & close error file
